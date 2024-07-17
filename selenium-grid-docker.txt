@@ -1,0 +1,41 @@
+docker network create \
+  --subnet=172.18.0.0/16 \
+  grid
+
+docker run -d \
+  --network grid \
+  --ip 172.18.0.2 \
+  --name hub \
+  --restart always \
+  -p 80:4444 \
+  selenium/hub:3.14.0-europium
+
+docker run -d \
+  --network grid \
+  --ip 172.18.0.3 \
+  --name chrome \
+  --restart always \
+  -p 5900:5900 \
+  -e HUB_HOST=172.18.0.2 \
+  -e HUB_PORT=4444 \
+  selenium/node-chrome-debug:3.14.0-europium
+
+docker run -d \
+  --network grid \
+  --ip 172.18.0.4 \
+  --name firefox \
+  --restart always \
+  -p 5901:5900 \
+  -e HUB_HOST=172.18.0.2 \
+  -e HUB_PORT=4444 \
+  selenium/node-firefox-debug:3.14.0-europium
+  
+
+http://<hostname>/grid/console
+http://<hostname>/wd/hub
+http://<hostname>/wd/hub/status
+
+http://52.224.232.217/grid/console
+http://52.224.232.217/wd/hub
+http://52.224.232.217/wd/hub/status
+
