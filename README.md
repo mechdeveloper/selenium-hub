@@ -1,3 +1,9 @@
+# Build your project
+
+```
+mvn clean install
+```
+
 # Run your tests
 
 ```

@@ -17,11 +17,15 @@ import static org.junit.Assert.assertEquals;
 public class GoogleSearchTest {
     private WebDriver driver;
 
+    // URL of the Selenium Grid Hub
+    String hubUrl = "http://52.224.232.217:4444/wd/hub";
+
+
     @Before
     public void setUp() throws MalformedURLException {
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setBrowserName("chrome");
-        driver = new RemoteWebDriver(new URL("http://52.224.232.217/wd/hub"), capabilities);
+        driver = new RemoteWebDriver(new URL(hubUrl), capabilities);
     }
 
     @Test
@@ -30,6 +34,7 @@ public class GoogleSearchTest {
         WebElement searchBox = driver.findElement(By.name("q"));
         searchBox.sendKeys("Selenium Grid");
         searchBox.submit();
+        System.out.println("Title in Chrome: " + driver.getTitle());
         assertEquals("Selenium Grid - Google Search", driver.getTitle());
     }
 
