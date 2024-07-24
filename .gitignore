@@ -1,3 +1,5 @@
+*.tar 
+
 # Compiled class files
 *.class
 
@@ -29,6 +31,7 @@ pom.xml.releaseBackup
 pom.xml.versionsBackup
 pom.xml.next
 release.properties
+
 
 # Eclipse
 .project
