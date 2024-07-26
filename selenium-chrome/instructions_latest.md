@@ -1,5 +1,7 @@
 # Selenium Grid Standalone with Chrome
 
+<https://csb100320003adad455.blob.core.windows.net/selenium-hub/standalone-chrome-latest.tar>
+
 Import Image
 ```sh
 docker load -i standalone-chrome-latest.tar
