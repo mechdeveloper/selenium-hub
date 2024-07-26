@@ -18,5 +18,5 @@ docker run --name standalone-chrome -d --network host --shm-size="2g" selenium/s
 ```
 
 URLs
-- Point your WebDriver tests to: <http://52.224.232.217:4444/wd/hub⁠>
-- (Optional) To see what is happening inside the container: <http://52.224.232.217:7900/?autoconnect=1&resize=scale&password=secret⁠>
+- Point your WebDriver tests to: <http://hostname:4444>
+- (Optional) To see what is happening inside the container: <http://hostname:7900/?autoconnect=1&resize=scale&password=secret⁠>
