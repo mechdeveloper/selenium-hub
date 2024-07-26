@@ -19,8 +19,7 @@ public class GoogleSearchTest {
 
     // URL of the Selenium Grid Hub
     String hubUrl = "http://52.224.232.217:4444/wd/hub";
-
-
+    
     @Before
     public void setUp() throws MalformedURLException {
         DesiredCapabilities capabilities = new DesiredCapabilities();
