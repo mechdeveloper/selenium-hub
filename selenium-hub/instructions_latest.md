@@ -10,8 +10,6 @@ docker load -i selenium-node-chrome-latest.tar
 docker load -i selenium-node-firefox-latest.tar
 ```
 
-
-
 ```sh
 docker network create grid
 ```

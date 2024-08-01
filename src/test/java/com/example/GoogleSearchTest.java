@@ -19,21 +19,21 @@ public class GoogleSearchTest {
     private WebDriver driver;
 
     // URL of the Selenium Grid Hub
-    String hubUrl = "http://40.117.210.94:4444";
+    String hubUrl = "http://40.87.83.192:4444";
     
     @Before
     public void setUp() throws MalformedURLException {
-        ChromeOptions options = new ChromeOptions();
-        options.addArguments("--headless");  // Run in headless mode
-        options.addArguments("--no-sandbox");
-        options.addArguments("--disable-dev-shm-usage");
-        options.addArguments("--disable-gpu");
+        // ChromeOptions options = new ChromeOptions();
+        // options.addArguments("--headless");  // Run in headless mode
+        // options.addArguments("--no-sandbox");
+        // options.addArguments("--disable-dev-shm-usage");
+        // options.addArguments("--disable-gpu");
 
-        driver = new RemoteWebDriver(new URL(hubUrl), options);
+        // driver = new RemoteWebDriver(new URL(hubUrl), options);
 
-        // DesiredCapabilities capabilities = new DesiredCapabilities();
-        // capabilities.setBrowserName("chrome");
-        // driver = new RemoteWebDriver(new URL(hubUrl), capabilities);
+        DesiredCapabilities capabilities = new DesiredCapabilities();
+        capabilities.setBrowserName("chrome");
+        driver = new RemoteWebDriver(new URL(hubUrl), capabilities);
     }
 
     @Test
