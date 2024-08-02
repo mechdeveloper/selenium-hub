@@ -4,3 +4,9 @@ Import Image
 ```sh
 docker load -i nginx.tar
 ```
+
+```sh
+docker run -d -p 8080:80 --name web nginx
+```
+
+<http://localhost:8080>
