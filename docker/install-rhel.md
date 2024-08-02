@@ -68,3 +68,7 @@ sudo usermod -aG docker $USER
 newgrp docker
 ```
 
+daemon logs
+```sh
+sudo journalctl -u docker.service
+```

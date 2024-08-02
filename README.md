@@ -15,8 +15,9 @@ Upload to Azure
 stroageaccountname=csb100320003adad455
 containername="selenium-hub"
 az storage blob upload \
-    --account-name <storage-account-name> \
-    --container-name <container-name> \
-    --name <blob-name> \
-    --file <path-to-local-file>
+    --account-name $stroageaccountname \
+    --container-name $containername \
+    --name nginx.tar \
+    --file nginx.tar
 ```
+
