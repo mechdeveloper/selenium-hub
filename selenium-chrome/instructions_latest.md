@@ -18,6 +18,10 @@ Run container with attached host network
 docker run --name standalone-chrome -d --network host --shm-size="2g" selenium/standalone-chrome:latest
 ```
 
+Add Host
+```sh
+docker run --name standalone-chrome --add-host mycustomhost:192.168.1.100 -d --network host --shm-size="2g" selenium/standalone-chrome:latest
+```
 
 # seleniarm/standalone-chromium
 ```sh
